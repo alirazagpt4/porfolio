@@ -1,4 +1,6 @@
-
+import teacher from "../images/teacher.png";
+import social from "../images/socialapp.jpg";
+import hrm from "../images/hrm.png";
 
 
 export const HERO_CONTENT = 'I am a passionate MERN Stack Developer with experience in building dynamic and scalable web applications using MongoDB, Express, React, and Node.js. I have worked on projects involving authentication, API development, and data management. My expertise includes state management with Redux, UI design with Material-UI, and optimizing performance for better user experiences. I am always eager to learn new technologies and enhance my development skills to build efficient and modern web solutions.';
@@ -55,23 +57,46 @@ export const EXPERIENCES = [
   
 
 
-  export const projects = [
+ export const projects = [
+    {
+      name: "Social App",
+      description: "A full-stack social media app built with the MERN stack.",
+      fullDescription: "This project is a full-featured social media application built using MongoDB, Express.js, React, and Node.js. It includes features like authentication, user profiles, posts, comments, and likes. The app also allows real-time chat using Socket.io.",
+      technologies: "MongoDB, Express, React, Node.js, Socket.io, JWT, Bcrypt",
+      image: social, // Add actual image URL
+      github: "https://github.com/your-username/social-app",
+      liveDemo: "https://social-app-demo-link"
+    },
     {
       name: "Teacher Management System",
-      description: "A simple teacher management system built with Express and MongoDB to manage teacher data.",
-      technologies: ["Express", "MongoDB"]
+      description: "A web-based teacher management system with MongoDB and Express.",
+      fullDescription: "This application allows administrators to manage teacher records, assign courses, and track attendance. The back-end is built with Express and MongoDB, while the front-end is developed using React.",
+      technologies: "MongoDB, Express, React, Node.js",
+      image: teacher, // Add actual image URL
+      github: "https://github.com/your-username/teacher-management-system",
+      liveDemo: "https://teacher-management-demo-link"
     },
     {
-      name: "Social App (MERN Stack)",
-      description: "A social app built using the MERN stack (MongoDB, Express, React, Node.js). Includes user profiles, posts, and social features.",
-      technologies: ["MongoDB", "Express", "React", "Node.js"]
+      name: "HRM Management System",
+      description: "A human resources management system for employee data and attendance tracking.",
+      fullDescription: "This system enables managing employee records, attendance data, and generating reports. It also allows importing attendance from an XLSX file and generating visual reports using React charts.",
+      technologies: "MongoDB, Express, React, Node.js, React Chartjs, XLSX",
+      image: hrm, // Add actual image URL
+      github: "https://github.com/your-username/hrm-management-system",
+      liveDemo: "https://hrm-management-demo-link"
     },
     {
-      name: "HRM Management System (hr-boto-project)",
-      description: "An HRM management system focusing on employee and attendance modules. Features XLSX-based attendance creation and viewing, React charts, and more.",
-      technologies: ["MERN Stack", "React Charts", "NodeMailer", "JWT", "CORS", "Bcrypt", "NodeCron", "Morgan", "Helmet"]
+      name: "Portfolio Website",
+      description: "A personal portfolio website to showcase projects and skills.",
+      fullDescription: "This is a responsive portfolio website created using React and Material UI. It showcases various projects, skills, and provides a contact form for inquiries.",
+      technologies: "React, Material UI, React Router DOM",
+      image: teacher, // Add actual image URL
+      github: "https://github.com/your-username/portfolio-website",
+      liveDemo: "https://portfolio-demo-link"
     }
   ];
+  
+  
   
 
   export const CONTACT_INFO = [
