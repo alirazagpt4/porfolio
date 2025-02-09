@@ -11,27 +11,23 @@ export const EDUCATION = [
       degree: "Matriculation",
       institution: "Pak Junior High School for Boys",
       city: "Khurrianwala, Faisalabad",
-      description: "Completed Matriculation with a focus on science subjects like Physics, Chemistry, and Mathematics.",
-      technologies: ["Mathematics", "Science", "Physics", "Chemistry"],
+      description: "Completed Matriculation with a focus on general studies.",
     },
     {
       year: "2016 - 2018",
       degree: "FSc Pre-Engineering",
       institution: "SMA Pak Junior High School for Boys",
       city: "Khurrianwala, Faisalabad",
-      description: "Studied Pre-Engineering with a focus on advanced Physics, Chemistry, and Mathematics.",
-      technologies: ["Mathematics", "Physics", "Chemistry", "Engineering Principles"],
+      description: "Studied Pre-Engineering with subjects in physics, chemistry, and mathematics.",
     },
     {
       year: "2018 - 2022",
       degree: "BS Information Technology",
       institution: "Government College University Faisalabad (GCUF)",
       city: "Faisalabad, Pakistan",
-      description: "Completed Bachelor's in IT, specializing in Software Development, Databases, and Web Technologies.",
-      technologies: ["JavaScript", "React.js", "Node.js", "Databases"],
+      description: "Pursued a Bachelor's degree in Information Technology, focusing on programming, database management, and networking.",
     },
   ];
-  
 
 export const EXPERIENCES = [
     {
