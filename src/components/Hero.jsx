@@ -4,20 +4,19 @@ import { HERO_CONTENT } from '../data/index';
 
 const Hero = () => {
   return (
-   
-
     <Box
       sx={{
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '0 16px',
-          mt:8,
-          color: '#fff',
-          borderBottom: '1px solid #1a1a1a', pb: 4 
-        }}
-        >
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: { xs: '16px', md: '0 16px' },
+        mt: 8,
+        color: '#fff',
+        borderBottom: '1px solid #1a1a1a',
+        pb: { xs: 2, md: 4 },
+      }}
+    >
       <Grid container spacing={4} alignItems="center">
         {/* Left Section */}
         <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
@@ -39,16 +38,14 @@ const Hero = () => {
             src={imageI}
             alt="Hero Image"
             sx={{
-                width: { xs: '100%', md: '70%' },  // Full width on mobile, 70% on desktop
-                borderRadius: '12px',
-                // Optional shadow for a polished look
+              width: { xs: '100%', sm: '80%', md: '70%' },  // Adjust width for better responsiveness
+              borderRadius: '12px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',  // Optional shadow for a polished look
             }}
-            />
+          />
         </Grid>
       </Grid>
     </Box>
-          
-             
   );
 };
 

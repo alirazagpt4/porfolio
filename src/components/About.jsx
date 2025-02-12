@@ -1,4 +1,4 @@
-import { Box, Grid, Card, CardContent, Typography, CardActions, Button, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Chip } from "@mui/material";
+import { Box, Grid, Card, CardContent, Typography, CardActions, Button, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Chip , Container } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useState } from "react";
 import { projects } from "../data";
@@ -20,6 +20,8 @@ const About = () => {
 
   return (
     <>
+     <Container>
+
       <Box sx={{ padding: 5, margin:3}}>
         <Typography variant="h4" gutterBottom align="center" sx={{ m: 10 }}>
           My Projects
@@ -34,7 +36,7 @@ const About = () => {
                   height="200"
                   image={project.image}
                   alt={project.name}
-                />
+                  />
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
                     {project.name}
@@ -53,14 +55,14 @@ const About = () => {
                     href={project.github}
                     target="_blank"
                     startIcon={<GitHubIcon />}
-                  >
+                    >
                     GitHub
                   </Button>
                   <Button
                     size="small"
                     color="secondary"
                     onClick={() => handleDialogOpen(project)}
-                  >
+                    >
                     View Details
                   </Button>
                 </CardActions>
@@ -88,13 +90,13 @@ const About = () => {
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
               {selectedProject?.technologies.split(", ").map((tech, idx) => (
                 <Chip
-                  key={idx}
-                  label={tech}
-                  sx={{
-                    backgroundColor: '#bb86fc',
-                    color: '#fff',
-                    fontWeight: '500',
-                  }}
+                key={idx}
+                label={tech}
+                sx={{
+                  backgroundColor: '#bb86fc',
+                  color: '#fff',
+                  fontWeight: '500',
+                }}
                 />
               ))}
             </Box>
@@ -118,6 +120,7 @@ const About = () => {
       </Dialog>
 
       <Footer />
+              </Container>
     </>
   );
 };
