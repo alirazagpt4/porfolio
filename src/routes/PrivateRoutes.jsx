@@ -1,10 +1,11 @@
-import { useRoutes, Link } from 'react-router-dom';
+import { useRoutes, Link , useLocation} from 'react-router-dom';
 import Home from '../components/Home';
 import About from '../components/About';
 import Contact from '../components/Contact';
-import { Box, AppBar, Toolbar, Button, Typography, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, Typography, IconButton, Drawer, List, ListItem, ListItemText  } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import  { useState } from 'react';
+import  { useEffect, useState } from 'react';
+import  Loader from '../components/Loader';
 
 const PrivateRoute = ({ children }) => {
   // Uncomment the following line if you want to use token-based authentication
@@ -73,7 +74,21 @@ const Navigation = () => {
 };
 
 const PrivateRoutes = () => {
-  return useRoutes([
+  const [loading , setLoading] = useState(false);
+  const location = useLocation();
+
+  useEffect(()=>{
+    setLoading(true)
+    const timer = setTimeout(()=>{
+          setLoading(false);
+    } , 5000);
+    return () => clearTimeout(timer);
+  },[location]);
+
+   
+  return (<>
+   {loading && <Loader/>}
+   { useRoutes([
     {
       path: '/',
       element: (
@@ -107,7 +122,9 @@ const PrivateRoutes = () => {
         </PrivateRoute>
       )
     }
-  ]);
+  ])};
+  </>
+  );
 };
 
 export default PrivateRoutes;
